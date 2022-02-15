@@ -1,0 +1,103 @@
+body {
+  overflow: hidden;
+}
+
+.bluered-bg {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -10;
+  background-image: url("https://wallpaperaccess.com/full/5499054.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.container {
+  padding: 1rem;
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container form {
+  background: #f3f3f3;
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid #d8d8d8;
+  border-radius: 0.3em;
+  padding: 3rem;
+  -webkit-box-shadow: 0px 0px 3px #000;
+          box-shadow: 0px 0px 3px #000;
+}
+
+.container form h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.error {
+  background-color: #ff0000;
+  padding: 0.5rem;
+  border-radius: 5px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  bottom: 50px;
+  left: -400px;
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 3px #000;
+          box-shadow: 0px 0px 3px #000;
+}
+
+.errorShow {
+  bottom: 50px;
+  left: 20px;
+}
+
+.footer {
+  width: 100%;
+  background: #010000;
+  position: absolute;
+  bottom: -100px;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .container form h1 {
+    font-size: 2rem;
+  }
+  .error {
+    width: 100%;
+    top: -100px;
+    bottom: auto;
+    left: auto;
+    border-radius: 0px;
+  }
+
+  .errorShow {
+    width: 100%;
+    top: 0px;
+    left: auto;
+  }
+  .footer {
+    padding: 1rem;
+  }
+  .footer h2{
+    font-size: 1.5rem;
+  }
+}
